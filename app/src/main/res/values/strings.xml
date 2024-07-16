@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Samojlov_AV_HomeworkAndroidStudio_number_4.1</string>
+    <string name="heading1">Калькулятор времени</string>
+    <string name="operandET">время: h m s</string>
+    <string name="sumButton">+</string>
+    <string name="difButton">-</string>
+    <string name="result">Результат</string>
+    <string name="reset">Reset</string>
+    <string name="exit">Exit</string>
+</resources>
