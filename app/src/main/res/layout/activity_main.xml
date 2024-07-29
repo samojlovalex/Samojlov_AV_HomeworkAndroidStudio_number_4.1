@@ -5,24 +5,32 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginLeft="8pt"
+    android:layout_marginRight="8pt"
+    android:background="@color/white"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/heading1TV"
-        android:layout_width="wrap_content"
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarMain"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="@string/heading1"
-        android:textSize="36sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@color/DarkGreen"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.1" />
+        app:subtitleTextAppearance="@style/TextAppearance.AppCompat.Small"
+        app:subtitleTextColor="@color/white"
+        app:titleTextAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:titleTextColor="@color/white"
+        tools:ignore="MissingConstraints">
+
+    </androidx.appcompat.widget.Toolbar>
 
     <LinearLayout
         android:id="@+id/linearLayoutInputOperand"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="8pt"
         android:layout_marginRight="8pt"
@@ -30,12 +38,12 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/heading1TV"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarMain"
         app:layout_constraintVertical_bias="0.1">
 
         <EditText
             android:id="@+id/firstOperandET"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="4pt"
             android:layout_weight="1"
@@ -51,7 +59,7 @@
 
         <EditText
             android:id="@+id/secondOperandET"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="4pt"
             android:layout_weight="1"
@@ -69,7 +77,7 @@
 
     <LinearLayout
         android:id="@+id/linearLayoutChoiceOperand"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="8pt"
         android:layout_marginRight="8pt"
@@ -82,20 +90,25 @@
 
         <Button
             android:id="@+id/sumButtonBTN"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:backgroundTint="@color/Green"
             android:text="@string/sumButton"
+            android:textColor="@color/white"
             android:textSize="22sp">
 
         </Button>
 
         <Button
             android:id="@+id/difButtonBTN"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:backgroundTint="@color/Green"
             android:text="@string/difButton"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
             android:textSize="22sp">
 
         </Button>
@@ -104,13 +117,14 @@
 
     <TextView
         android:id="@+id/resultTV"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="@string/result"
         android:textSize="36sp"
         android:layout_marginLeft="8pt"
         android:layout_marginRight="8pt"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -118,43 +132,5 @@
         app:layout_constraintVertical_bias="0.1">
 
     </TextView>
-
-    <LinearLayout
-        android:id="@+id/linearLayoutResetExit"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="8pt"
-        android:layout_marginRight="8pt"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/resultTV"
-        app:layout_constraintVertical_bias="0.1"
-        >
-
-        <Button
-            android:id="@+id/resetButtonBTN"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/reset"
-            android:textSize="22sp">
-
-        </Button>
-
-        <Button
-            android:id="@+id/exitButtonBTN"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/exit"
-            android:textSize="22sp">
-
-        </Button>
-
-    </LinearLayout>
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

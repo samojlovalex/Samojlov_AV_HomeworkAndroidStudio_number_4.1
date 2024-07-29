@@ -7,4 +7,8 @@
     <string name="result">Результат</string>
     <string name="reset">Reset</string>
     <string name="exit">Exit</string>
+    <string name="toolbar_title">Калькулятор времени</string>
+    <string name="toolbar_subtitle">версия 1.0</string>
+    <string name="toast_reset">Данные очищены</string>
+    <string name="toast_exit">Приложение закрыто</string>
 </resources>
